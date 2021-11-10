@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Coterie</title>
+</head>
+<body>
+    
+<br><br>
+<h1>Witaj w swojej Koterii, który klan wybierzesz?</h1>
+<form>
+
+  <input type="radio" id="Torreador" name="clan"  class="clan" value="Talent i piękno są dla nich myśliwskim kamuflażem. Toreadorzy są uosobieniem legend o wampirach, które uwodzą i wabią swoje ofiary pięknem, miłością oraz zmysłowością." onchange="handleChange(this)">
+  <label for="Torreador">Torreador</label><br>
+  <input type="radio" id="Brujah" name="clan"  class="clan" value="Szybko wpadają w gniew i zawsze działają z pasją. Często są uznawani za klan hardych buntowników i zbirów, z którymi nie należy zadzierać." onchange="handleChange(this)">
+  <label for="Brujah">Brujah</label><br>
+  <input type="radio" id="Nosferatu" name="clan" class="clan" value="Jako mistrzowie gier szpiegowskich wśród nieumarłych oraz władcy podziemi gromadzą informacje, aby sprzedać je za wysoką cenę." onchange="handleChange(this)">
+  <label for="Nosferatu">Nosferatu</label>
+
+
+</form>
+
+  <script>
+
+   function handleChange(src) {
+  alert(src.value);
+    let klan = src.id
+    console.log(src.id)
+    switch(klan){
+        case "Torreador":
+            document.body.style.backgroundImage = 'url("https://content.bloodhunt.com/public/2021-06/BloodHunt%20-%20WallPaper%20-%20%20Muse%20-%201920x1080.jpg")'
+            break;
+        case "Nosferatu":
+        document.body.style.backgroundImage = 'url("https://content.bloodhunt.com/public/2021-06/BloodHunt%20-%20WallPaper%20-%20%20Saboteur%20-%201920x1080.jpg")'
+            break;
+        case "Brujah":
+        document.body.style.backgroundImage = 'url("https://content.bloodhunt.com/public/2021-08/BloodHunt%20-%20WallPaper%20-%20Brute%20-%201920x1080.png")'
+            break;
+    }
+
+  }
+    
+  </script>
+
+<br><br><br><br>
+<!--
+<img src="https://www.dexerto.com/wp-content/uploads/2021/09/08/vampire-the-masquerade-Bloodhunt-clans-ranked-1024x576.jpeg" alt="https://www.dexerto.com/wp-content/uploads/2021/09/08/vampire-the-masquerade-Bloodhunt-clans-ranked-1024x576.jpeg">
+-->
+</body>
+</html>
